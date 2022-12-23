@@ -23,11 +23,11 @@ def og_image():
     height = 630
 
     # Let's get our image 
-    # response = requests.get('https://live.staticflickr.com/7504/16258492451_3a097a932a_k.jpg')
-    # image = Image.open(BytesIO(response.content))   
-    # image.thumbnail((width, height))      # This is how you resize an image
+    response = requests.get('https://live.staticflickr.com/7504/16258492451_3a097a932a_k.jpg')
+    image = Image.open(BytesIO(response.content))   
+    image.thumbnail((width, height))      # This is how you resize an image
 
-    image=Image.new('RGB', (width, height))
+#     image=Image.new('RGB', (width, height))
 
     # Draw the title on the image
     draw = ImageDraw.Draw(image)
